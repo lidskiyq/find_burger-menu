@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>Upload Image</title>
+      <h1>Find burger menu on image</h1>
+      <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+         }
+         h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-top: 50px;
+        }
+         form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+         }
+         input[type=file] {
+            border: none;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            outline: none;
+            font-size: 1.2rem;
+         }
+         button[type=submit] {
+            border: none;
+            padding: 1rem 2rem;
+            background-color: #008080;
+            color: #ffffff;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+         }
+         button[type=submit]:hover {
+            background-color: #006666;
+         }
+      </style>
+   </head>
+   <body>
+      <form method="POST" enctype="multipart/form-data">
+         {% csrf_token %}
+         <input type="file" name="image"><br><br>
+         <button type="submit">Upload</button>
+      </form>
+   </body>
+</html>
