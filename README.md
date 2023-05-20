@@ -11,3 +11,9 @@ pip install -r requirements.txt
 ```
 python manage.py runserver
 ```
+Загрузка изображения:
+![start](https://github.com/lidskiyq/tetris/blob/main/start.png)
+
+Результат:
+
+![result](https://github.com/lidskiyq/tetris/blob/main/result.png)
